@@ -1,1 +1,31 @@
-<html><head><title>eSports Gaming Zone</title><style>td { padding: 5px; font-size:30px; }.table-container { display: flex; justify-content: center; }</style></head><body><div class='table-container'><table border='1'><tr><th>ID</th><th>Name</th><th>Charges</th><th>Date</th><th>Time</th></tr></table></div></body></html>
+
+    <html>
+    <head>
+        <title>eSports Gaming Zone</title>
+        <style>
+            td { padding: 5px; font-size:30px; }  /* Add padding to create margin between columns */
+            .table-container { display: flex; justify-content: center; }  /* Centering the table */
+        </style>
+        <script>
+            const password = "123";  // Change this to your desired password
+            const userInput = prompt("Enter the password:");
+
+            if (userInput !== password) {
+                document.body.innerHTML = "Access denied.";
+            } else {
+                document.getElementById("content").style.display = "block"; // Show the content if the password is correct
+            }
+        </script>
+    </head>
+    <body>
+        <div id="content" style="display: none;">  <!-- Initially hide the content -->
+            <div class='table-container'>
+                <table border='1'>
+                    <tr><th>ID</th><th>Name</th><th>Charges</th><th>Date</th><th>Time</th></tr>
+    
+                </table>
+            </div>
+        </div>
+    </body>
+    </html>
+    
