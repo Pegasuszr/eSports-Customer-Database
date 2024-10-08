@@ -7,29 +7,14 @@
             .table-container { display: flex; justify-content: center; }  /* Centering the table */
         </style>
         <script>
-            let password = "arif";  // Initial password
-
             function checkPassword() {
+                const password = "123";  // Change this to your desired password
                 const userInput = prompt("Enter the password:");
 
                 if (userInput !== password) {
                     document.body.innerHTML = "<h1>Access denied.</h1>";
                 } else {
                     document.getElementById("content").style.display = "block"; // Show the content if the password is correct
-                    changePassword();  // Allow password change after successful login
-                }
-            }
-
-            function changePassword() {
-                if (confirm("Do you want to change the password?")) {
-                    const currentPassword = prompt("Enter current password:");
-                    if (currentPassword === password) {
-                        const newPassword = prompt("Enter new password:");
-                        password = newPassword;  // Update the password variable
-                        alert("Password changed successfully!");
-                    } else {
-                        alert("Current password is incorrect. Password not changed.");
-                    }
                 }
             }
 
