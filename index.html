@@ -7,14 +7,18 @@
             .table-container { display: flex; justify-content: center; }  /* Centering the table */
         </style>
         <script>
-            const password = "arif";  // Change this to your desired password
-            const userInput = prompt("Enter the password:");
+            function checkPassword() {
+                const password = "123";  // Change this to your desired password
+                const userInput = prompt("Enter the password:");
 
-            if (userInput !== password) {
-                document.body.innerHTML = "Access denied.";
-            } else {
-                document.getElementById("content").style.display = "block"; // Show the content if the password is correct
+                if (userInput !== password) {
+                    document.body.innerHTML = "<h1>Access denied.</h1>";
+                } else {
+                    document.getElementById("content").style.display = "block"; // Show the content if the password is correct
+                }
             }
+
+            window.onload = checkPassword;  // Call the function when the page loads
         </script>
     </head>
     <body>
