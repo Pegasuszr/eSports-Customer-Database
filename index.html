@@ -12,7 +12,7 @@
                 const userInput = prompt("Enter the password:");
 
                 if (userInput !== password) {
-                    document.body.innerHTML = "<h1>Access denied.</h1>";
+                    document.body.innerHTML = "<h1 style="color: red;">Access denied.</h1>";
                 } else {
                     document.getElementById("content").style.display = "block"; // Show the content if the password is correct
                 }
