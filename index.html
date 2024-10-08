@@ -5,6 +5,13 @@
     <style>
         td { padding: 5px; font-size:30px; }  /* Add padding to create margin between columns */
         .table-container { display: flex; justify-content: center; }  /* Centering the table */
+        .centered {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;  /* Full height to center vertically */
+        }
     </style>
     <script>
         let password = "123";  // Change this to your desired password
@@ -14,6 +21,7 @@
             const input = document.createElement("input");
             input.type = "password";
             input.placeholder = "Enter the password:";
+            input.style.margin = "10px";  // Add margin for spacing
             document.body.appendChild(input);
             input.focus();
 
@@ -36,7 +44,7 @@
         window.onload = checkPassword;  // Call the function when the page loads
     </script>
 </head>
-<body>
+<body class="centered">  <!-- Add the centered class to the body -->
     <div id="content" style="display: none;">  <!-- Initially hide the content -->
         <div class='table-container'>
             <table border='1'>
